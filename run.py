@@ -103,3 +103,13 @@ def off_board(row, column):
     Tells user if they select wrong range for the grid
     """
     print("Please pick another one")
+
+
+def printing_board(board):
+    rows = len(board)
+    cols = len(board)
+    print("---+---+---")
+    for r in range(rows):
+        print(board[r][0], " |", board[r][1], "|", board[r][2])
+        print("---+---+---")
+    return board
