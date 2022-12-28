@@ -4,9 +4,9 @@ import random
 def main():
     intro_message = intro()
     board = create_board()
-    print_board = printBoard()
-    player_symbol = player_sym()
-    checker = boardCheck(board, player_1, player_2)
+    print_board = printing_board(board)
+    player_1, player_2 = player_sym()
+    checker = board_check(board, player_1, player_2)
 
 
 def intro():
@@ -59,7 +59,7 @@ def start(board, player_1, player_2, count):
                        "[left column: enter 0, middle column: enter 1, right column enter 2]"))
 
     while (row > 2 or row < 0) or (column > 2 or column < 0):
-        on_board(row, column)
+        off_board(row, column)
         row = int(input("Pick a row[upper row:"
                         "[enter 0, middle row: enter 1, bottom row: enter 2]:"))
         column = int(input("Pick a column:"
@@ -77,3 +77,29 @@ def start(board, player_1, player_2, count):
     else:
         board[row][column] = player_2
     return (board)
+
+
+def board_check(board, player_1, player_2):
+    count = 1
+    winner = True
+
+    while count < 10 and winner == True:
+        gaming = start(board, player_1, player_2, count)
+        print_board = printing_board(board)
+
+        if count == 9:
+            print("Game Over")
+            if winner == True:
+                print("Game is a tie")
+
+        winner = champion(board, player_1, player_2, count)
+        count += 1 
+    if winner == False:
+        print("Game Over")
+
+
+def off_board(row, column):
+    """
+    Tells user if they select wrong range for the grid
+    """
+    print("Please pick another one")
