@@ -72,3 +72,8 @@ def start(board, player_1, player_2, count):
         column = int(input("Pick a column:"
                             "[left column: enter 0, middle column: enter 1, right column enter 2]")) 
         
+    if player == player_1:
+        board[row][column] = player_1
+    else:
+        board[row][column] = player_2
+    return (board)
