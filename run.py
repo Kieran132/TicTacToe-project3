@@ -51,7 +51,7 @@ def start(board, player_1, player_2, count):
         player = player_1
     elif count % 2 == 1:
         player = player_2
-    print("Player" + player + ", it is your turn.")
+    print("Player " + player + ", it is your turn.")
     row = int(input("Pick a row:"
                     "[upper row: enter 0, middle row: enter 1, bottom row: enter 2]:"))
     column = int(input("Pick a column:"
@@ -119,18 +119,18 @@ def champion(board, player_1, player_2, count):
     for row in range(0, 3):
         if (board[row][0] == board[row][1] == board[row][2] == player_1):
             winner = False
-            print("Player" + player_1 + ", you are a winner!")
+            print("Player " + player_1 + ", you are a winner!")
         elif (board[row][0] == board[row][1] == board[row][2] == player_2):
             winner = False
-            print("Player" + player_2 + ", you are a winner!")
+            print("Player " + player_2 + ", you are a winner!")
 
     for col in range(0, 3):
         if (board[col][0] == board[col][1] == board[col][2] == player_1):
             winner = False
-            print("Player" + player_1 + ", you are a winner!")
+            print("Player " + player_1 + ", you are a winner!")
         elif (board[col][0] == board[col][1] == board[col][2] == player_2):
             winner = False
-            print("Player" + player_2 + ", you are a winner!")
+            print("Player " + player_2 + ", you are a winner!")
 
     if board[0][0] == board[1][1] == board[2][2] == player_1:
         winner = False 
