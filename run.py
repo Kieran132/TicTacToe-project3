@@ -152,3 +152,7 @@ def champion(board, player_1, player_2, count):
         print("Player " + player_2 + ", you won!")
 
     return winner
+
+
+def wrong(board, player_1, player_2, row, column):
+    print("Already selected, please choose another.")
