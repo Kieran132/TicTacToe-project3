@@ -1,12 +1,9 @@
-import random
-
-
 def main():
-    intro_message = intro()
+    intro()
     board = create_board()
-    print_board = printing_board(board)
+    printing_board(board)
     player_1, player_2 = player_sym()
-    checker = board_check(board, player_1, player_2)
+    board_check(board, player_1, player_2)
 
 
 def intro():
@@ -66,7 +63,7 @@ def start(board, player_1, player_2, count):
                            "[left column: enter 0, middle column: enter 1, right column enter 2]"))
 
     while (board[row][column] == player_1) or (board[row][column] == player_2):
-        fill = wrong(board, player_1, player_2, row, column)
+        wrong(board, player_1, player_2, row, column)
         row = int(input("Pick a row[upper row:"
                         "[enter 0, middle row: enter 1, bottom row: enter 2]:"))
         column = int(input("Pick a column:"
@@ -84,8 +81,8 @@ def board_check(board, player_1, player_2):
     winner = True
 
     while count < 10 and winner == True:
-        gaming = start(board, player_1, player_2, count)
-        print_board = printing_board(board)
+        start(board, player_1, player_2, count)
+        printing_board(board)
 
         if count == 9:
             print("Game Over")
@@ -113,6 +110,7 @@ def printing_board(board):
         print(board[r][0], " |", board[r][1], "|", board[r][2])
         print("---+---+---")
     return board
+
 
 def champion(board, player_1, player_2, count):
     """
@@ -156,3 +154,6 @@ def champion(board, player_1, player_2, count):
 
 def wrong(board, player_1, player_2, row, column):
     print("Already selected, please choose another.")
+
+
+main()
