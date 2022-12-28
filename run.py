@@ -40,7 +40,6 @@ def player_sym():
         player_2 = "X"
         print("Player 2, you are X")
     input("Press Enter to play!")
-    print("/n")
     return (player_1, player_2)
 
 
