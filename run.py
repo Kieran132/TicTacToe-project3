@@ -64,3 +64,11 @@ def start(board, player_1, player_2, count):
                         "[enter 0, middle row: enter 1, bottom row: enter 2]:"))
         column = int(input("Pick a column:"
                            "[left column: enter 0, middle column: enter 1, right column enter 2]"))
+
+    while (board[row][column] == player_1) or (board[row][column] == player_2):
+        fill = wrong(board, player_1, player_2, row, column)
+        row = int(input("Pick a row[upper row:"
+                        "[enter 0, middle row: enter 1, bottom row: enter 2]:"))
+        column = int(input("Pick a column:"
+                            "[left column: enter 0, middle column: enter 1, right column enter 2]")) 
+        
