@@ -76,6 +76,9 @@ def start(board, player_1, player_2, count):
 
 
 def board_check(board, player_1, player_2):
+    """
+    Checks to see if the board is full
+    """
     count = 1
     winner = True
 
