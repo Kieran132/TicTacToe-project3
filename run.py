@@ -66,8 +66,8 @@ def start(board, player_1, player_2, count):
         wrong(board, player_1, player_2, row, column)
         row = int(input("Pick a row[upper row:"
                         "[enter 0, middle row: enter 1, bottom row: enter 2]:"))
-        column = int(input("Pick a column:"
-                            "[left column: enter 0, middle column: enter 1, right column enter 2]"))     
+        column = int(input("Pick a column:" 
+                        "[left column: enter 0, middle column: enter 1, right column enter 2]"))     
     if player == player_1:
         board[row][column] = player_1
     else:
@@ -105,8 +105,10 @@ def off_board(row, column):
 
 
 def printing_board(board):
+    """
+    Prints the board to the terminal in a better visual way
+    """
     rows = len(board)
-    cols = len(board)
     print("---+---+---")
     for r in range(rows):
         print(board[r][0], " |", board[r][1], "|", board[r][2])
@@ -120,8 +122,8 @@ def champion(board, player_1, player_2, count):
     """
     winner = True
 
-    #Horizontal Winning Conditiond
-    for row in range (0, 3):
+# Horizontal Winning Conditiond
+    for row in range(0, 3):
         if (board[row][0] == board[row][1] == board[row][2] == player_1):
             winner = False
             print("Player " + player_1 + ", you won!")
@@ -130,8 +132,8 @@ def champion(board, player_1, player_2, count):
             winner = False
             print("Player " + player_2 + ", you won!")
 
-    #Vertial Winning Conditions
-    for col in range (0, 3):
+# Vertial Winning Conditions
+    for col in range(0, 3):
         if (board[0][col] == board[1][col] == board[2][col] == player_1):
             winner = False
             print("Player " + player_1 + ", you won!")
@@ -139,7 +141,7 @@ def champion(board, player_1, player_2, count):
             winner = False
             print("Player " + player_2 + ", you won!")
 
-    #Diagonal Winning Conditions
+# Diagonal Winning Conditions
     if board[0][0] == board[1][1] == board[2][2] == player_1:
         winner = False
         print("Player " + player_1 + ", you won!")
