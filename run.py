@@ -35,7 +35,7 @@ def player_sym():
     player_1 = input("Player 1, please choose your symbol, X or O? ")
     if player_1 == "X":
         player_2 = "O"
-        print("Player 2, you are O")
+        print("Player 2, you are " + player_2)
     else:
         player_2 = "X"
         print("Player 2, you are X")
