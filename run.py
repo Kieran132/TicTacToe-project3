@@ -35,6 +35,7 @@ def player_sym():
     player_1 = input("Player 1, please choose your symbol, X or O? ")
     if player_1 == "X":
         player_2 = "O"
+        print("Player 2, you are O")
         print("Player 2, you are " + player_2)
     else:
         player_2 = "X"
@@ -52,28 +53,16 @@ def start(board, player_1, player_2, count):
     elif count % 2 == 1:
         player = player_2
     print("Player " + player + ", it is your turn.")
-    row = int(input("Pick a row:"
-                    "[upper row: enter 0, middle row:",
-                    " enter 1, bottom row: enter 2]:"))
-    column = int(input("Pick a column:"
-                       "[left column: enter 0, middle column:",
-                       " enter 1, right column enter 2]"))
+    row = int(input("Pick a row:0, 1, 2: "))
+    column = int(input("Pick a column:0, 1, 2: "))
     while (row > 2 or row < 0) or (column > 2 or column < 0):
         off_board(row, column)
-        row = int(input("Pick a row[upper row:"
-                        "[enter 0, middle row: enter 1, bottom row:",
-                        "enter 2]:"))
-        column = int(input("Pick a column:"
-                           "[left column: enter 0, middle column: enter 1,",
-                           "right column enter 2]"))
+        row = int(input("Pick a row:0, 1, 2: "))
+        column = int(input("Pick a column:0, 1, 2: "))
     while (board[row][column] == player_1) or (board[row][column] == player_2):
         wrong(board, player_1, player_2, row, column)
-        row = int(input("Pick a row[upper row:"
-                        "[enter 0, middle row: enter 1, bottom row:",
-                        "enter 2]:"))
-        column = int(input("Pick a column:",
-                           "[left column: enter 0, middle column: enter 1,",
-                           "right column enter 2]"))
+        row = int(input("Pick a row:0, 1, 2: "))
+        column = int(input("Pick a column:0, 1, 2: "))
     if player == player_1:
         board[row][column] = player_1
     else:
@@ -87,18 +76,15 @@ def board_check(board, player_1, player_2):
     """
     count = 1
     winner = True
-
     while count < 10 and winner is True:
         start(board, player_1, player_2, count)
         printing_board(board)
-
         if count == 9:
             print("Game Over")
             if winner is True:
                 print("Game is a tie")
-
         winner = champion(board, player_1, player_2, count)
-        count += 1
+        count += 1 
     if winner is False:
         print("Game Over")
 
@@ -127,16 +113,15 @@ def champion(board, player_1, player_2, count):
     Checks board to see if there is a winner
     """
     winner = True
-
 # Horizontal Winning Conditiond
     for row in range(0, 3):
         if (board[row][0] == board[row][1] == board[row][2] == player_1):
             winner = False
             print("Player " + player_1 + ", you won!")
+   
         elif (board[row][0] == board[row][1] == board[row][2] == player_2):
             winner = False
             print("Player " + player_2 + ", you won!")
-
 # Vertial Winning Conditions
     for col in range(0, 3):
         if (board[0][col] == board[1][col] == board[2][col] == player_1):
@@ -145,24 +130,19 @@ def champion(board, player_1, player_2, count):
         elif (board[0][col] == board[1][col] == board[2][col] == player_2):
             winner = False
             print("Player " + player_2 + ", you won!")
-
 # Diagonal Winning Conditions
     if board[0][0] == board[1][1] == board[2][2] == player_1:
         winner = False
         print("Player " + player_1 + ", you won!")
-
     elif board[0][0] == board[1][1] == board[2][2] == player_2:
         winner = False
         print("Player " + player_2 + ", you won!")
-
     elif board[0][2] == board[1][1] == board[2][0] == player_1:
         winner = False
         print("Player " + player_1 + ", you won!")
-
     elif board[0][2] == board[1][1] == board[2][0] == player_2:
         winner = False
         print("Player " + player_2 + ", you won!")
-
     return winner
 
 
