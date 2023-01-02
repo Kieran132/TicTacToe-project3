@@ -84,7 +84,7 @@ def board_check(board, player_1, player_2):
             if winner is True:
                 print("Game is a tie")
         winner = champion(board, player_1, player_2, count)
-        count += 1 
+        count += 1
     if winner is False:
         print("Game Over")
 
@@ -118,7 +118,6 @@ def champion(board, player_1, player_2, count):
         if (board[row][0] == board[row][1] == board[row][2] == player_1):
             winner = False
             print("Player " + player_1 + ", you won!")
-   
         elif (board[row][0] == board[row][1] == board[row][2] == player_2):
             winner = False
             print("Player " + player_2 + ", you won!")
