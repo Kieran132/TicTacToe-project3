@@ -33,13 +33,13 @@ def player_sym():
     Function that allows the players to choose which symbol they want
     """
     player_1 = input("Player 1, please choose your symbol, X or O? ")
-    if player_1 == "X":
-        player_2 = "O"
-        print("Player 2, you are O")
+    if player_1 == "O":
+        player_2 = "X"
+        print("Player 1, you are O")
         print("Player 2, you are " + player_2)
     else:
-        player_2 = "X"
-        print("Player 2, you are X")
+        player_2 = "O"
+        print("Player 2, you are O")
     input("Press Enter to play!")
     return (player_1, player_2)
 
