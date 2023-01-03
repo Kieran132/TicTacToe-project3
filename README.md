@@ -1,31 +1,29 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Tic Tac Toe - Project 3 Python Essentials
+If you are a true old school gamer, there is nothing more notstalgic than to go back to terminal games and having to type what you wanted to do into the terminal for and output to be produced. This Tic Tac Toe game does exactly that.
 
-Welcome Kieran132,
+## Live Site 
+https://tic-tac-toe-3.herokuapp.com/
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Repository
+https://github.com/Kieran132/TicTacToe-project3
 
-## Reminders
+## Contents
+- Project Goals
+- Existing Features
+    - Start of the game
+    - Player Selection
+    - How to choose a spot
+    - Chosen Spot
+    - Winner
+- Technologies Used
+- Testing
+- Deployment
+- Credits
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Project Goals
+The aim of this project was to showcase backend technology Python. I felt that creating something interactive and fun would be more engaging and also more user friendly for the user. This quick simple game of Tic Tac Toe, really hypes up the competitiveness of both users to the point where they want to keep playing until either has at leat won once.
 
-## Creating the Heroku app
+## Existing Features
+Throughout playing this terminal based games, it is a very step by step process in the way one cannot be moved onto unless the previous one has been selected
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
