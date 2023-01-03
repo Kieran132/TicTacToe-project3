@@ -146,6 +146,9 @@ def champion(board, player_1, player_2, count):
 
 
 def wrong(board, player_1, player_2, row, column):
+    """
+    Function that tells user a place has already been selected
+    """
     print("Already selected, please choose another.")
 
 
