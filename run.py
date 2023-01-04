@@ -2,10 +2,10 @@ def main():
     """
     Functions needed to run the game
     """
-    intro()
+    name_1, name_2 = intro()
     board = create_board()
     printing_board(board)
-    player_1, player_2 = player_sym()
+    player_1, player_2 = player_sym(name_1, name_2)
     board_check(board, player_1, player_2)
 
 
@@ -15,7 +15,9 @@ def intro():
     """
     print("Ready to play Tic Tac Toe?!")
     print("First to get 3 in a row wins!")
-    print("Press enter to continue")
+    name_1 = input("Player 1, Enter your name: ")
+    name_2 = input("Player 2, Enter your name: ")
+    return name_1, name_2
 
 
 def create_board():
@@ -28,18 +30,19 @@ def create_board():
     return board
 
 
-def player_sym():
+def player_sym(name_1, name_2):
     """
     Function that allows the players to choose which symbol they want
     """
-    player_1 = input("Player 1, please choose your symbol, X or O? ")
+    
+    player_1 = input(name_1 + ", please choose your symbol, X or O? ")
     if player_1 == "O":
         player_2 = "X"
-        print("Player 1, you are O")
-        print("Player 2, you are " + player_2)
+        print(name_1 + "you are O")
+        print(name_2 + ", you are " + player_2)
     else:
         player_2 = "O"
-        print("Player 2, you are O")
+        print(name_2 + ", you are O")
     input("Press Enter to play!")
     return (player_1, player_2)
 
@@ -53,8 +56,8 @@ def start(board, player_1, player_2, count):
     elif count % 2 == 1:
         player = player_2
     print("Player " + player + ", it is your turn.")
-    row = int(input("Pick a row:0, 1, 2: "))
-    column = int(input("Pick a column:0, 1, 2: "))
+    row = int(input("Pick a row: 0, 1, 2: "))
+    column = int(input("Pick a column: 0, 1, 2: "))
     while (row > 2 or row < 0) or (column > 2 or column < 0):
         off_board(row, column)
         row = int(input("Pick a row:0, 1, 2: "))
