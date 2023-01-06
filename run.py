@@ -34,7 +34,6 @@ def player_sym(name_1, name_2):
     """
     Function that allows the players to choose which symbol they want
     """
-    
     player_1 = input(name_1 + ", please choose your symbol, X or O? ")
     if player_1 == "O":
         player_2 = "X"
@@ -56,21 +55,43 @@ def start(board, player_1, player_2, count):
     elif count % 2 == 1:
         player = player_2
     print("Player " + player + ", it is your turn.")
-    row = int(input("Pick a row: 0, 1, 2: "))
-    column = int(input("Pick a column: 0, 1, 2: "))
-    while (row > 2 or row < 0) or (column > 2 or column < 0):
+    row = int(get_row())
+    column = int(get_col())
+    while ((row) > 2 or (row) < 0) or ((column) > 2 or (column) < 0):
         off_board(row, column)
-        row = int(input("Pick a row:0, 1, 2: "))
-        column = int(input("Pick a column:0, 1, 2: "))
+        row = get_row()
+        column = get_col()
     while (board[row][column] == player_1) or (board[row][column] == player_2):
         wrong(board, player_1, player_2, row, column)
-        row = int(input("Pick a row:0, 1, 2: "))
-        column = int(input("Pick a column:0, 1, 2: "))
+        row = get_row()
+        column = get_col()
     if player == player_1:
         board[row][column] = player_1
     else:
         board[row][column] = player_2
     return (board)
+
+
+def get_row():
+    while True:
+        row = input('enter row number 0 - 2 ')
+        if row not in ["0", "1", "2"]:
+            print(
+                "Invalid input, Enter number between 0 and 2")
+            continue
+        else:
+            return row
+
+
+def get_col():
+    while True:
+        column = input('enter column number 0 - 2 ')
+        if column not in ["0", "1", "2"]:
+            print(
+                "Invalid input, Enter number between 0 and 2")
+            continue
+        else:
+            return column
 
 
 def board_check(board, player_1, player_2):
