@@ -77,7 +77,8 @@ def get_row():
     Validates the input for row selection is within the right limit
     """
     while True:
-        row = input('enter row number 0 - 2 ')
+        row = input(
+            'enter row number: Top: 0, Middle: 1, Bottom: 2 ')
         if row not in ["0", "1", "2"]:
             print(
                 "Invalid input, Enter number between 0 and 2")
@@ -91,7 +92,8 @@ def get_col():
     Validates the input for column selection is within the right limit
     """
     while True:
-        column = input('enter column number 0 - 2 ')
+        column = input(
+            'enter column number: Left: 0, Middle: 1, Right: 2 ')
         if column not in ["0", "1", "2"]:
             print(
                 "Invalid input, Enter number between 0 and 2")
