@@ -6,7 +6,7 @@ def main():
     board = create_board()
     printing_board(board)
     player_1, player_2 = player_sym(name_1, name_2)
-    board_check(board, player_1, player_2)
+    board_check(board, player_1, player_2, name_1, name_2)
 
 
 def intro():
@@ -37,24 +37,23 @@ def player_sym(name_1, name_2):
     player_1 = input(name_1 + ", please choose your symbol, X or O? ")
     if player_1 == "O":
         player_2 = "X"
-        print(name_1 + "you are O")
         print(name_2 + ", you are " + player_2)
     else:
         player_2 = "O"
         print(name_2 + ", you are O")
     input("Press Enter to play!")
-    return (player_1, player_2)
+    return (player_2, player_1)
 
 
-def start(board, player_1, player_2, count):
+def start(board, player_1, player_2, count, name_1, name_2):
     """
     Function to start the game
     """
-    if count % 2 == 0:
-        player = player_1
-    elif count % 2 == 1:
-        player = player_2
-    print("Player " + player + ", it is your turn.")
+    if count % 2 == 1:
+        player = name_2
+    elif count % 2 == 0:
+        player = name_1
+    print(player + ", it is your turn.")
     row = int(get_row())
     column = int(get_col())
     while ((row) > 2 or (row) < 0) or ((column) > 2 or (column) < 0):
@@ -65,7 +64,7 @@ def start(board, player_1, player_2, count):
         wrong(board, player_1, player_2, row, column)
         row = get_row()
         column = get_col()
-    if player == player_1:
+    if player == name_1:
         board[row][column] = player_1
     else:
         board[row][column] = player_2
@@ -102,14 +101,14 @@ def get_col():
             return column
 
 
-def board_check(board, player_1, player_2):
+def board_check(board, player_1, player_2, name_1, name_2):
     """
     Checks to see if the board is full
     """
     count = 1
     winner = True
     while count < 10 and winner is True:
-        start(board, player_1, player_2, count)
+        start(board, player_1, player_2, count, name_1, name_2)
         printing_board(board)
         if count == 9:
             print("Game Over")
