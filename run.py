@@ -35,14 +35,13 @@ def player_sym(name_1, name_2):
     Function that allows the players to choose which symbol they want
     """
     player_1 = input(name_1 + ", please choose your symbol, X or O? ")
-    if player_1 == "O":
-        player_2 = "X"
-        print(name_2 + ", you are " + player_2)
-    else:
+    if player_1 == "X":
         player_2 = "O"
-        print(name_2 + ", you are O")
+    else:
+        player_2 = "X"
+        print(name_2 + ", you are X")
     input("Press Enter to play!")
-    return (player_2, player_1)
+    return (player_1, player_2)
 
 
 def start(board, player_1, player_2, count, name_1, name_2):
@@ -50,9 +49,9 @@ def start(board, player_1, player_2, count, name_1, name_2):
     Function to start the game
     """
     if count % 2 == 1:
-        player = name_2
-    elif count % 2 == 0:
         player = name_1
+    elif count % 2 == 0:
+        player = name_2
     print(player + ", it is your turn.")
     row = int(get_row())
     column = int(get_col())
@@ -77,7 +76,7 @@ def get_row():
     """
     while True:
         row = input(
-            'enter row number: Top: 0, Middle: 1, Bottom: 2 ')
+            'enter row number: Top: 0, Middle: 1, Bottom: 2: ')
         if row not in ["0", "1", "2"]:
             print(
                 "Invalid input, Enter number between 0 and 2")
@@ -92,7 +91,7 @@ def get_col():
     """
     while True:
         column = input(
-            'enter column number: Left: 0, Middle: 1, Right: 2 ')
+            'enter column number: Left: 0, Middle: 1, Right: 2: ')
         if column not in ["0", "1", "2"]:
             print(
                 "Invalid input, Enter number between 0 and 2")
