@@ -2,7 +2,7 @@
 If you are a true old school gamer, there is nothing more notstalgic than to go back to terminal games and having to type what you wanted to do into the terminal for and output to be produced. This Tic Tac Toe game does exactly that.
 
 ## Live Site 
-https://tic-tac-toe-3.herokuapp.com/
+
 
 ## Repository
 https://github.com/Kieran132/TicTacToe-project3

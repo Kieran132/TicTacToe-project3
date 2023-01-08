@@ -49,9 +49,9 @@ def start(board, player_1, player_2, count, name_1, name_2):
     Function to start the game
     """
     if count % 2 == 1:
-        player = name_1
-    elif count % 2 == 0:
         player = name_2
+    elif count % 2 == 0:
+        player = name_1
     print(player + ", it is your turn.")
     row = int(get_row())
     column = int(get_col())
@@ -113,7 +113,7 @@ def board_check(board, player_1, player_2, name_1, name_2):
             print("Game Over")
             if winner is True:
                 print("Game is a tie")
-        winner = champion(board, player_1, player_2, count)
+        winner = champion(board, player_1, player_2, count, name_1, name_2)
         count += 1
     if winner is False:
         print("Game Over")
@@ -138,7 +138,7 @@ def printing_board(board):
     return board
 
 
-def champion(board, player_1, player_2, count):
+def champion(board, player_1, player_2, count, name_1, name_2):
     """
     Checks board to see if there is a winner
     """
@@ -147,31 +147,31 @@ def champion(board, player_1, player_2, count):
     for row in range(0, 3):
         if (board[row][0] == board[row][1] == board[row][2] == player_1):
             winner = False
-            print("Player " + player_1 + ", you won!")
+            print(name_1 + ", you won!")
         elif (board[row][0] == board[row][1] == board[row][2] == player_2):
             winner = False
-            print("Player " + player_2 + ", you won!")
+            print(name_2 + ", you won!")
 # Vertial Winning Conditions
     for col in range(0, 3):
         if (board[0][col] == board[1][col] == board[2][col] == player_1):
             winner = False
-            print("Player " + player_1 + ", you won!")
+            print(name_1 + ", you won!")
         elif (board[0][col] == board[1][col] == board[2][col] == player_2):
             winner = False
-            print("Player " + player_2 + ", you won!")
+            print(name_2 + ", you won!")
 # Diagonal Winning Conditions
     if board[0][0] == board[1][1] == board[2][2] == player_1:
         winner = False
-        print("Player " + player_1 + ", you won!")
+        print(name_1 + ", you won!")
     elif board[0][0] == board[1][1] == board[2][2] == player_2:
         winner = False
-        print("Player " + player_2 + ", you won!")
+        print(name_2 + ", you won!")
     elif board[0][2] == board[1][1] == board[2][0] == player_1:
         winner = False
-        print("Player " + player_1 + ", you won!")
+        print(name_1 + ", you won!")
     elif board[0][2] == board[1][1] == board[2][0] == player_2:
         winner = False
-        print("Player " + player_2 + ", you won!")
+        print(name_2 + ", you won!")
     return winner
 
 
