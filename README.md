@@ -91,3 +91,17 @@ For a valid input the be entered, the user must enter the correct value. However
 
 Playing a game like this with multiple inputs, it can be difficult to rememeber which space the other player has selected. If a player chooses a space that has already been chosen, a message will appear telling them that and asking to choose another.
 
+## Technologies Used
+- Gitpod - used to create the website
+- Github - used to store repository of website and deploy website
+- Python - 
+- Heroku - 
+
+## Testing
+
+Click [Here](/TESTING.md) to see further information on testng and bugs
+
+## Deployment
+
+
+## Credits
