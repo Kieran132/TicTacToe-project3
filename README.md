@@ -47,6 +47,47 @@ Once name inputs have been entered, the terminal asks a player to choose between
 
 <img src="assests/README.md photos/shows_players_symbols.png">
 
-Depending on what letter is selected initially, the game will then get the second users name and tell them which symbol they are.
+Depending on what letter is selected initially, the game will then get the second users name and tell them which symbol they are. The to start the game, the user will hit enter
 
+#### Player One First Go
+
+<img src="assests/README.md photos/player_1_first_go.png">
+
+Once enter has been hit, the terminal will tell a player it is their turn, then give them the option of selecting a row.
+
+#### Row and Column Choice
+
+<img src="assests/README.md photos/shows_column_row_choice.png">
+
+The terminal will ask for both a row and column selection and details of where each selection is, is given in the question for the user.
+
+#### Placement on the Grid
+
+<img src="assests/README.md photos/shows_selection_on_grid.png">
+
+Once a player has correctly inputted the correct range, the game will show their input as a placement on the grid with the symbol they have been assigned
+
+#### Showing the Winner
+
+<img src="assests/README.md photos/shows_winner.png">
+
+If a player has managed to get a row of 3 of their symbol then the game will stop and a message will show tellng the players who is the winner
+
+#### Showing a Tie
+
+<img src="assests/README.md photos/shows_tie.png">
+
+If the game come to the conclusion that neither player was able to get a row of three, then the game will finish the game and highlight the game is a tie and the game is over.
+
+#### Invalid Input
+
+<img src="assests/README.md photos/invalid-entry.png">
+
+For a valid input the be entered, the user must enter the correct value. However, if the user chooses a number or character outside the parameters then an invalid message will show up to the user asking them to reselect within the correct range of values.
+
+#### Already Selected Space
+
+<img src="assests/README.md photos/already_selected.png">
+
+Playing a game like this with multiple inputs, it can be difficult to rememeber which space the other player has selected. If a player chooses a space that has already been chosen, a message will appear telling them that and asking to choose another.
 
