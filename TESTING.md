@@ -22,3 +22,21 @@ When implementing the new functions into the start function I put together to ru
 TypeError: '>' not supported between instances of 'str' and 'int'
 
 The way around solving this probelm was to add int() and insert the functions name within. This converts the specified value into an integer.
+
+#### Double selection of already selected space
+
+Once a player selects an already selected position, the programme throws an error message. However, if the same combination is chosen again, a TypeError message was presented to the terminal:
+
+  File "run.py", line 61, in start
+    while (board[row][column] == player_1) or (board[row][column] == player_2):
+TypeError: list indices must be integers or slices, not str
+
+To solve this issue in both get_row and get_column function I changed it to:
+
+int(input(
+            'enter row number: Top: 0, Middle: 1, Bottom: 2: '))
+        if row not in [0, 1, 2]:
+
+int(input(
+            'enter column number: Left: 0, Middle: 1, Right: 2: '))
+        if column not in [0, 1, 2]:
