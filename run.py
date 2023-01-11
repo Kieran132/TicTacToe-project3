@@ -15,10 +15,30 @@ def intro():
     """
     print("Ready to play Tic Tac Toe?!")
     print("First to get 3 in a row wins!")
-    name_1 = input("Player 1, Enter your name: ")
-    name_2 = input("Player 2, Enter your name: ")
-    return name_1, name_2
+    while True:
+        name_1 = input("Player 1, Enter your name: ")
+        if name_1.strip() == '':
+            print("Please enter your name")
+            continue
+        else:
+            break
+    while True:
+        name_2 = input("Player 2, Enter your name: ")
+        if name_2.strip() == '':
+            print("Please enter your name")
+            continue
+        else:
+            return name_1, name_2
 
+
+def check_name():
+    while True:
+        name = input("Enter your name: ")
+    if name not in [" "]:
+        print("Please enter your name")
+    else:
+        return name
+    
 
 def create_board():
     """
@@ -76,7 +96,7 @@ def get_row():
     while True:
         row = int(input(
             'enter row number: Top: 0, Middle: 1, Bottom: 2: '))
-        if row not in [0, 1, 2, ' ']:
+        if row not in [0, 1, 2,]:
             print(
                 "Invalid input, Enter number between 0 and 2")
             continue
@@ -91,7 +111,7 @@ def get_col():
     while True:
         column = int(input(
             'enter column number: Left: 0, Middle: 1, Right: 2: '))
-        if column not in [0, 1, 2, ' ']:
+        if column not in [0, 1, 2,]:
             print(
                 "Invalid input, Enter number between 0 and 2")
             continue
@@ -135,7 +155,7 @@ def champion(board, player_1, player_2, count, name_1, name_2):
     Checks board to see if there is a winner
     """
     winner = True
-# Horizontal Winning Conditiond
+# Horizontal Winning Conditions
     for row in range(0, 3):
         if (board[row][0] == board[row][1] == board[row][2] == player_1):
             winner = False
