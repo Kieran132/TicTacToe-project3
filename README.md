@@ -105,3 +105,12 @@ Click [Here](/TESTING.md) to see further information on testng and bugs
 
 
 ## Credits
+
+- https://gist.github.com/qianguigui1104/edb3b11b33c78e5894aad7908c773353 - Was used as a refernece point of understanding the outcome and writing python code
+
+- https://medium.com/byte-tales/the-classic-tic-tac-toe-game-in-python-3-1427c68b8874 - used as a reference on writing and understanding python code
+
+- https://inventwithpython.com/chapter10.html - used as a reference on writing and understanding python code
+
+- Tutor support - Helped in re-writing the code to iron out errors that kept popping up
+

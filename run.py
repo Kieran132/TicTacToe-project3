@@ -76,7 +76,7 @@ def get_row():
     while True:
         row = int(input(
             'enter row number: Top: 0, Middle: 1, Bottom: 2: '))
-        if row not in [0, 1, 2]:
+        if row not in [0, 1, 2, ' ']:
             print(
                 "Invalid input, Enter number between 0 and 2")
             continue
@@ -91,7 +91,7 @@ def get_col():
     while True:
         column = int(input(
             'enter column number: Left: 0, Middle: 1, Right: 2: '))
-        if column not in [0, 1, 2]:
+        if column not in [0, 1, 2, ' ']:
             print(
                 "Invalid input, Enter number between 0 and 2")
             continue
