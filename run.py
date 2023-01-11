@@ -56,7 +56,6 @@ def start(board, player_1, player_2, count, name_1, name_2):
     row = int(get_row())
     column = int(get_col())
     while ((row) > 2 or (row) < 0) or ((column) > 2 or (column) < 0):
-        off_board(row, column)
         row = get_row()
         column = get_col()
     while (board[row][column] == player_1) or (board[row][column] == player_2):
@@ -117,13 +116,6 @@ def board_check(board, player_1, player_2, name_1, name_2):
         count += 1
     if winner is False:
         print("Game Over")
-
-
-def off_board(row, column):
-    """
-    Tells user if they select wrong range for the grid
-    """
-    print("Please pick another one")
 
 
 def printing_board(board):
