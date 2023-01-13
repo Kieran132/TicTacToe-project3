@@ -124,6 +124,20 @@ To create a clone you do the following;
 5. Add Git Clone with the copy of the repositroy name
 6. Clone has been created
 
+### Repositroy deployment via Heroku
+- On the https://dashboard.heroku.com/apps page, click New and then select Create New App from the drop-down menu.
+- When the next page loads insert the App name and Choose a region. The click Create app
+- In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. There were no credentials required for this app.
+- Below this click Add buildpack and choose python and nodejs in that order.
+
+#### Deployment of the app
+- Click on the Deploy tab and select Github-Connect to Github.
+- Enter the repository name and click Search.
+- Choose the repository that holds the correct files and click Connect.
+- A choice is offered between manual or automatic deployment whereby the app is updated when changes are pushed to GitHub.
+- Once the deployment method has been chosen the app will be built and can be launched by clicking the Open app button at the top of the page.
+
+
 
 ## Credits
 
