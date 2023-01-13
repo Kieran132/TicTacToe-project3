@@ -1,5 +1,5 @@
 # Tic Tac Toe - Project 3 Python Essentials
-If you are a true old school gamer, there is nothing more notstalgic than to go back to terminal games and having to type what you wanted to do into the terminal for and output to be produced. This Tic Tac Toe game does exactly that.
+If you are a true old school gamer, there is nothing more notstalgic than to go back to a terminal game and having to type what you wanted into the terminal for the output to be produced. This Tic Tac Toe game does exactly that.
 
 ## Live Site 
 https://tic-tac-toe-3.herokuapp.com/

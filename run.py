@@ -46,7 +46,7 @@ def player_sym(name_1, name_2):
     Function that allows the players to choose which symbol they want
     """
     player_1 = input(name_1 + ", please choose your symbol, X or O? ")
-    if player_1 == "X":
+    if player_1 == "X" or player_1 == "x":
         player_2 = "O"
     else:
         player_2 = "X"
@@ -97,7 +97,7 @@ def get_row():
             print("Please choose a number")
             continue
 
-        
+
 def get_col():
     """
     Validates the input for column selection is within the right limit
