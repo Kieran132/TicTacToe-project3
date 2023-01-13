@@ -85,28 +85,35 @@ def get_row():
     Validates the input for row selection is within the right limit
     """
     while True:
-        row = int(float(input(
-            'enter row number: Top: 0, Middle: 1, Bottom: 2: ')))
-        if row not in [0, 1, 2,]:
-            print(
-                "Invalid input, Enter number between 0 and 2")
-        else:
-            return row
+        row = input(
+            'enter row number: Top: 0, Middle: 1, Bottom: 2: ')
+        try:
+            if int(row.strip()) not in [0, 1, 2,]:
+                print("Invalid input, Enter number between 0 and 2")
+                continue
+            else:
+                return row
+        except ValueError:
+            print("Please choose a number")
+            continue
 
-
+        
 def get_col():
     """
     Validates the input for column selection is within the right limit
     """
     while True:
-        column = int(float(input(
-            'enter column number: Left: 0, Middle: 1, Right: 2: ')))
-        if column not in [0, 1, 2,]:
-            print(
-                "Invalid input, Enter number between 0 and 2")
+        column = input(
+            'enter column number: Left: 0, Middle: 1, Right: 2: ')
+        try:
+            if int(column.strip()) not in [0, 1, 2,]:
+                print("Invalid input, Enter number between 0 and 2")
+                continue
+            else:
+                return column
+        except ValueError:
+            print("Please choose a number")
             continue
-        else:
-            return column
 
 
 def board_check(board, player_1, player_2, name_1, name_2):
