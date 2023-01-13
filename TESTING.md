@@ -40,3 +40,9 @@ int(input(
 int(input(
             'enter column number: Left: 0, Middle: 1, Right: 2: '))
         if column not in [0, 1, 2]:
+
+#### ValueError: invalid literal for int() with base 10: '':
+
+When selecting a row input and choosing an empty string, the ValueError appeared. This is because the input returns a string and for the code to work it needed to be an integer. 
+
+To solve this issue, I removed int() from the input and called the int() at a later step. Also, I used a try/except validation on the input.
