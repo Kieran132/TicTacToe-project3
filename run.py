@@ -45,7 +45,12 @@ def player_sym(name_1, name_2):
     """
     Function that allows the players to choose which symbol they want
     """
-    player_1 = input(name_1 + ", please choose your symbol, X or O? ")
+    while True:
+        player_1 = input(name_1 + ", please choose your symbol, X or O? ")
+        if player_1.strip() == '':
+            print("Please select a symbol")
+        else:
+            break
     if player_1 == "X" or player_1 == "x":
         player_2 = "O"
     else:
