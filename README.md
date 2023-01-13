@@ -28,6 +28,10 @@ https://github.com/Kieran132/TicTacToe-project3
 ## Project Goals
 The aim of this project was to showcase backend technology Python. I felt that creating something interactive and fun would be more engaging and also more user friendly for the user. This quick simple game of Tic Tac Toe, really hypes up the competitiveness of both users to the point where they want to keep playing until either has at leat won once.
 
+## Initial Idea Diagram
+
+<img src="assests/README.md photos/flow_diagram.png">
+
 ## Existing Features
 Throughout playing this terminal based games, it is a very simple step by step process. A selection had to be made before the game can progress and be playable.
 
