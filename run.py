@@ -88,7 +88,7 @@ def get_row():
         row = input(
             'enter row number: Top: 0, Middle: 1, Bottom: 2: ')
         try:
-            if int(row.strip()) not in [0, 1, 2,]:
+            if int(row.strip()) not in [0, 1, 2, ]:
                 print("Invalid input, Enter number between 0 and 2")
                 continue
             else:
@@ -106,7 +106,7 @@ def get_col():
         column = input(
             'enter column number: Left: 0, Middle: 1, Right: 2: ')
         try:
-            if int(column.strip()) not in [0, 1, 2,]:
+            if int(column.strip()) not in [0, 1, 2, ]:
                 print("Invalid input, Enter number between 0 and 2")
                 continue
             else:
