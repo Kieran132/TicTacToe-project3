@@ -31,15 +31,6 @@ def intro():
             return name_1, name_2
 
 
-def check_name():
-    while True:
-        name = input("Enter your name: ")
-    if name not in [" "]:
-        print("Please enter your name")
-    else:
-        return name
-    
-
 def create_board():
     """
     Function to create layout of a blank board
@@ -94,12 +85,11 @@ def get_row():
     Validates the input for row selection is within the right limit
     """
     while True:
-        row = int(input(
-            'enter row number: Top: 0, Middle: 1, Bottom: 2: '))
+        row = int(float(input(
+            'enter row number: Top: 0, Middle: 1, Bottom: 2: ')))
         if row not in [0, 1, 2,]:
             print(
                 "Invalid input, Enter number between 0 and 2")
-            continue
         else:
             return row
 
@@ -109,8 +99,8 @@ def get_col():
     Validates the input for column selection is within the right limit
     """
     while True:
-        column = int(input(
-            'enter column number: Left: 0, Middle: 1, Right: 2: '))
+        column = int(float(input(
+            'enter column number: Left: 0, Middle: 1, Right: 2: ')))
         if column not in [0, 1, 2,]:
             print(
                 "Invalid input, Enter number between 0 and 2")
