@@ -76,8 +76,8 @@ def start(board, player_1, player_2, count, name_1, name_2):
         column = get_col()
     while (board[row][column] == player_1) or (board[row][column] == player_2):
         wrong(board, player_1, player_2, row, column)
-        row = get_row()
-        column = get_col()
+        row = int(get_row())
+        column = int(get_col())
     if player == name_1:
         board[row][column] = player_1
     else:
