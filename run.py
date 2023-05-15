@@ -17,18 +17,28 @@ def intro():
     print("First to get 3 in a row wins!")
     while True:
         name_1 = input("Player 1, Enter your name: ")
-        if name_1.strip() == '':
-            print("Please enter your name")
+        if not is_valid_input(name_1):
+            print("Invalid input. Please enter only letters and numbers.")
             continue
         else:
             break
     while True:
         name_2 = input("Player 2, Enter your name: ")
-        if name_2.strip() == '':
-            print("Please enter your name")
+        if not is_valid_input(name_2):
+            print("Invalid input. Please enter only letters and numbers.")
             continue
         else:
             return name_1, name_2
+
+def is_valid_input(input_str):
+    """
+    Function to check if the input string contains only letters and numbers
+    """
+    valid_chars = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789')
+    for char in input_str:
+        if char not in valid_chars:
+            return False
+    return True
 
 
 def create_board():
@@ -47,15 +57,13 @@ def player_sym(name_1, name_2):
     """
     while True:
         player_1 = input(name_1 + ", please choose your symbol, X or O? ")
-        if player_1.strip() == '':
-            print("Please select a symbol")
-        else:
+        player_1 = player_1.strip().upper()  
+        if player_1 == 'X' or player_1 == 'O':
             break
-    if player_1 == "X" or player_1 == "x":
-        player_2 = "O"
-    else:
-        player_2 = "X"
-        print(name_2 + ", you are X")
+        else:
+            print("Invalid symbol. Please choose either X or O.")
+    player_2 = 'O' if player_1 == 'X' else 'X'
+    print(name_2 + ", you are", player_2)
     input("Press Enter to play!")
     return (player_1, player_2)
 
