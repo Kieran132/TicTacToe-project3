@@ -30,11 +30,13 @@ def intro():
         else:
             return name_1, name_2
 
+
 def is_valid_input(input_str):
     """
     Function to check if the input string contains only letters and numbers
     """
-    valid_chars = set('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789')
+    valid_chars = set(
+            'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789')
     for char in input_str:
         if char not in valid_chars:
             return False
@@ -57,7 +59,7 @@ def player_sym(name_1, name_2):
     """
     while True:
         player_1 = input(name_1 + ", please choose your symbol, X or O? ")
-        player_1 = player_1.strip().upper()  
+        player_1 = player_1.strip().upper()
         if player_1 == 'X' or player_1 == 'O':
             break
         else:
