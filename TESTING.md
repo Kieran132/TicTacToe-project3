@@ -53,17 +53,30 @@ To solve this issue, I removed int() from the input and called the int() at a la
 #### Name Input
 
 - Player one and player two can choose their own name
-- Character validation to only allow letters and numbers
 
 #### Symbol Selection
 
 - First player gets to choose symbol
 - Other player is the other symbol
-- Validation - only X or O can be selected
 - Capital or lowercase game recognises the character
 
 #### Playing the game
 
 - Co ordinates correspond to the board
-- Players cant choose same space as other player
-- first to get 3 in a row wins
+- First to get 3 in a row wins
+
+#### Winner
+
+- When there is a clear winner the game stops and shows the winner
+
+#### Tie
+
+- If the game is a tie, the users are notified and the game stops
+
+#### Validation 
+
+- Selecting the name: Only letters and numbers are allowed
+- Selecting Symbol: Only X and O, upper or lower case, are allowed
+- Choosing the same spot as another player is not allowed
+- Selecting a space out of the range given is not allowed
+

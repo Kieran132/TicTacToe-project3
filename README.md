@@ -1,31 +1,36 @@
 # Tic Tac Toe - Project 3 Python Essentials
+
 If you are a true old school gamer, there is nothing more notstalgic than to go back to a terminal game and having to type what you wanted into the terminal for the output to be produced. This Tic Tac Toe game does exactly that.
 
-## Live Site 
+## Live Site
+
 https://tic-tac-toe-3.herokuapp.com/
 
 ## Repository
+
 https://github.com/Kieran132/TicTacToe-project3
 
 ## Contents
+
 - Project Goals
 - Existing Features
-    - Name Entry
-    - Player Symbol Choice
-    - PLayers Symbol Choices
-    - Player One First Go
-    - Row and Column Choice
-    - Placement on Grid
-    - Shows Winner
-    - Shows Tie
-    - Invalid Input
-    - Already Selected
+  - Name Entry
+  - Player Symbol Choice
+  - PLayers Symbol Choices
+  - Player One First Go
+  - Row and Column Choice
+  - Placement on Grid
+  - Shows Winner
+  - Shows Tie
+  - Invalid Input
+  - Already Selected
 - Technologies Used
 - Testing
 - Deployment
 - Credits
 
 ## Project Goals
+
 The aim of this project was to showcase backend technology Python. I felt that creating something interactive and fun would be more engaging and also more user friendly for the user. This quick simple game of Tic Tac Toe, really hypes up the competitiveness of both users to the point where they want to keep playing until either has at leat won once.
 
 ## Initial Idea Diagram
@@ -33,6 +38,7 @@ The aim of this project was to showcase backend technology Python. I felt that c
 <img src="assests/README.md photos/flow_diagram.png">
 
 ## Existing Features
+
 Throughout playing this terminal based games, it is a very simple step by step process. A selection had to be made before the game can progress and be playable.
 
 #### Name Entry
@@ -96,6 +102,7 @@ For a valid input the be entered, the user must enter the correct value. However
 Playing a game like this with multiple inputs, it can be difficult to rememeber which space the other player has selected. If a player chooses a space that has already been chosen, a message will appear telling them that and asking to choose another.
 
 ## Technologies Used
+
 - Gitpod - used to create the website
 - Github - used to store repository of website and deploy website
 - Python - used to write the code for the game
@@ -108,7 +115,9 @@ Click [Here](/TESTING.md) to see further information on testng and bugs
 ## Deployment
 
 ### Github Deployment
+
 The website was delpoyed using GitHub. To do this I did the following;
+
 1. When on the websites GitHub repository, click on the settings tab
 2. Now on the settings page, on the left hand side of the page, click on the pages tab
 3. Under the Source section, click on the drop down menu titled Branch and select main
@@ -117,10 +126,13 @@ The website was delpoyed using GitHub. To do this I did the following;
 (https://github.com/Kieran132/TicTacToe-project3)
 
 ### Creating a Fork or Copying
+
 To clone/fork/copy the repository you click on the fork tab which is situated next to unwatch tab in the top right corner of the page
 
 ### Clone
+
 To create a clone you do the following;
+
 1. Click on the code tab, left of the Gitpod tab
 2. To the right of the repository name, click the clipboard icon
 3. In the IED open GitBash
@@ -129,19 +141,19 @@ To create a clone you do the following;
 6. Clone has been created
 
 ### Repositroy deployment via Heroku
+
 - On the https://dashboard.heroku.com/apps page, click New and then select Create New App from the drop-down menu.
 - When the next page loads insert the App name and Choose a region. The click Create app
 - In the settings tab click on Reveal Config Vars and add the key Port and the value 8000. There were no credentials required for this app.
 - Below this click Add buildpack and choose python and nodejs in that order.
 
 #### Deployment of the app
+
 - Click on the Deploy tab and select Github-Connect to Github.
 - Enter the repository name and click Search.
 - Choose the repository that holds the correct files and click Connect.
 - A choice is offered between manual or automatic deployment whereby the app is updated when changes are pushed to GitHub.
 - Once the deployment method has been chosen the app will be built and can be launched by clicking the Open app button at the top of the page.
-
-
 
 ## Credits
 
@@ -152,4 +164,3 @@ To create a clone you do the following;
 - https://inventwithpython.com/chapter10.html - used as a reference on writing and understanding python code
 
 - Tutor support - Helped in re-writing the code to iron out errors that kept popping up
-
